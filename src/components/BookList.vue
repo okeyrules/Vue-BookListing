@@ -2,7 +2,8 @@
     <div>
         <h1>{{title}}</h1>
         <ul>
-            <li v-for="book in books">
+            <li v-for='book in books'
+                :key='book.id'>
                 {{ book.title }} : {{ book.author }} 
             </li>    
         </ul>
@@ -25,16 +26,12 @@
     };
 </script>
 
-<style lang="scss" scoped>
+<style>
 h1, h2 {
   font-weight: normal;
 }
 ul {
-    list-style-type: none; 
-    padding: 0;
-}
-li {
-    display: block;
-    margin: 0 10px;
+  list-style-type: none;
+  padding: 0;
 }
 </style>
